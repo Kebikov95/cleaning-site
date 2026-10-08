@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Замените домен на свой после деплоя
+Sitemap: https://chistiy-divan.ru/sitemap.xml
