@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Замените домен на свой, если привяжете его к сайту
-Sitemap: https://kebikov95.github.io/cleaning-site/sitemap.xml
