@@ -176,8 +176,8 @@ a {
 }
 
 .btn-outline-dark:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-color: rgb(255 255 255 / 15%);
+  border-color: var(--color-white);
 }
 
 .btn-small {
