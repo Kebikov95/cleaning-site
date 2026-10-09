@@ -799,6 +799,19 @@ a {
   color: var(--color-text-muted);
 }
 
+.contact-value a,
+.contact-card h2 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.contact-value a:hover,
+.contact-card h2 a:hover {
+  text-decoration: underline;
+  color: var(--color-text-muted);
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
