@@ -445,7 +445,7 @@ a {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -746,7 +746,7 @@ a {
 
 .contacts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -873,6 +873,12 @@ a {
 .form-field textarea {
   min-height: 96px;
   resize: vertical;
+}
+
+.form-field-hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
 }
 
 .form-hint {
@@ -1037,6 +1043,10 @@ a {
   }
 
   .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
