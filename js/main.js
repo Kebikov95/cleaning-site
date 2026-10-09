@@ -57,15 +57,27 @@ function initRequestForm() {
   const form = document.getElementById('request-form');
   const success = document.getElementById('form-success');
 
-  if (!form || !success) {
+  if (!success) {
     return;
   }
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  if (new URLSearchParams(window.location.search).has('sent')) {
     success.hidden = false;
-    form.reset();
-    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.history.replaceState(null, '', window.location.pathname);
+  }
+
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener('submit', () => {
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Отправляем…';
+    }
   });
 }
 
