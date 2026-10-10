@@ -52,11 +52,23 @@ npm run lint:html  # только HTML
      (адрес зашит в скрытом поле `_next` — при смене домена обновите его);
    - заявка не уйдёт, пока форма не активирована первым письмом.
 2. **Публикация**: включите GitHub Pages (Settings → Pages → branch `main`,
-   папка `/ (root)`). Sitemap и robots.txt уже настроены под адрес
-   `kebikov95.github.io/cleaning-site` — при подключении своего домена
-   замените URL в обоих файлах и в поле `_next`.
-3. **SEO**: добавьте сайт в Яндекс.Вебмастер и Google Search Console,
-   укажите регион — Гомель.
+   папка `/ (root)`). Sitemap, robots.txt, `_next` формы и canonical-теги
+   настроены под домен `freshgomel.by` — при смене домена обновите URL
+   в этих файлах.
+3. **SEO — добавить сайт в поисковики:**
+   - [Яндекс.Вебмастер](https://webmaster.yandex.ru) → «Добавить сайт» →
+     `https://freshgomel.by/` → подтвердить права (проще всего мета-тегом:
+     они дадут строку вида
+     `<meta name="yandex-verification" content="код">` — вставить её в
+     `<head>` всех трёх страниц) → «Индексирование → Файлы Sitemap» →
+     указать `https://freshgomel.by/sitemap.xml` → задать регион «Гомель»;
+   - [Google Search Console](https://search.google.com/search-console) →
+     добавить ресурс → подтвердить права → отправить тот же sitemap;
+   - в `index.html` уже есть разметка Schema.org (LocalBusiness + FAQPage) —
+     по ней поисковики показывают расширенный сниппет с ценами и вопросами.
+4. **SEO-файлы уже в проекте**: `robots.txt` (правила + адрес sitemap),
+   `sitemap.xml` (карта сайта), `404.html` (на GitHub Pages работает
+   автоматически), canonical- и Open Graph-теги на каждой странице.
 
 ## Примечания
 
